@@ -1,8 +1,7 @@
 import { CSSProperties, ReactElement } from "react";
 
 export default function HowUProWorks(): ReactElement {
-  const cardClass =
-    "bg-lime-950/70 rounded-lg overflow-hidden flex flex-col h-96";
+  const cardClass = "bg-lime-950/70 rounded-lg  flex flex-col";
 
   return (
     <div className="flex flex-col gap-5 bg-black h-auto p-10 ">
