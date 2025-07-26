@@ -5,9 +5,9 @@ export default function HowUProWorks(): ReactElement {
     "bg-lime-950/70 rounded-lg overflow-hidden flex flex-col h-96";
 
   return (
-    <div className="flex flex-col gap-5 bg-black h-auto p-10">
-      <div className="flex flex-col gap-5 my-10">
-        <h1 className="text-center font-bold text-white text-5xl">
+    <div className="flex flex-col gap-5 bg-black h-auto p-10 ">
+      <div className="flex flex-col gap-10 my-10 w-1/2 mx-auto my-40">
+        <h1 className="text-center font-bold text-white text-5xl ">
           A New Way to Train Starts Here
         </h1>
         <p className="text-center text-white">
