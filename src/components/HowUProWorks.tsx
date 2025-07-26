@@ -3,16 +3,18 @@ import { ReactElement } from "react";
 export default function HowUProWorks(): ReactElement {
   const cardClass = "bg-green-900 rounded-lg min-h-80";
   return (
-    <div className="flex flex-col gap-5 px-15">
-      <h1 className="text-center font-bold text-5xl">
-        A New Way to Train Starts Here
-      </h1>
-      <p className="text-center ">
-        No more boring drills. No more wasted screen time. With U-Pro, kids
-        learn real soccer skills through fun, personalized missions — all from
-        home.
-      </p>
-      <div className="grid grid-cols-3 gap-5">
+    <div className="flex flex-col gap-5 bg-black h-screen p-10">
+      <div className="flex flex-col gap-5 my-10">
+        <h1 className="text-center font-bold text-white text-5xl">
+          A New Way to Train Starts Here
+        </h1>
+        <p className="text-center text-white">
+          No more boring drills. No more wasted screen time. With U-Pro, kids
+          learn real soccer skills through fun, personalized missions — all from
+          home.
+        </p>
+      </div>
+      <div className="grid grid-cols-3 gap-10">
         <div className={`col-span-2 ${cardClass}`}>
           {CardDetails("Title", "Description")}
         </div>
