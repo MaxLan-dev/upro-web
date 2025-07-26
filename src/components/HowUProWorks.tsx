@@ -16,7 +16,7 @@ export default function HowUProWorks(): ReactElement {
           home.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-y-16 gap-x-10 w-4/5 mx-auto">
         {/* <div className={cardClass}>05</div> */}
 
         <div className={`col-span-2 ${cardClass}`}>
