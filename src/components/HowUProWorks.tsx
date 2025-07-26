@@ -15,10 +15,10 @@ export default function HowUProWorks(): ReactElement {
           home.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-y-16 gap-x-10 w-4/5 mx-auto">
+      <div className="grid grid-cols-6 gap-y-16 gap-x-10 w-4/5 mx-auto">
         {/* <div className={cardClass}>05</div> */}
 
-        <div className={`col-span-2 ${cardClass}`}>
+        <div className={`col-span-3 ${cardClass}`}>
           <CardDetails
             title="🧠 Capture Movement"
             description="U-Pro uses your phone’s camera and our patent-pending AI
@@ -30,25 +30,51 @@ export default function HowUProWorks(): ReactElement {
           />
         </div>
 
-        <div className={`${cardClass}`}>
-          <CardDetails
+        <div className={`col-span-3 h-64 ${cardClass} `}>
+          {/* <CardDetails
             title="📈 Level Up Skills"
             description="Each session adapts to your player’s age and level.
             Earn XP by completing challenges, improving form, and unlocking new
             drills."
-            imgSrc="https://cataas.com/cat/gif"
-            imgClassName="rounded-lg"
+            imgSrc="level_up_skills.svg"
+            imgClassName="mx-auto w-auto scale-200 translate-y-10"
             style={{}}
-          />
+          /> */}
+
+          <div className="relative flex flex-row content-center h-full items-center">
+            <div className="flex flex-col gap-10 px-6 py-4 text-white w-2/3">
+              <h1 className="font-bold text-2xl mb-2">📈 Level Up Skills</h1>
+              <p className="">
+                Each session adapts to your player’s age and level. Earn XP by
+                completing challenges, improving form, and unlocking new drills.
+              </p>
+            </div>
+            <div className="w-1/3"></div>
+            <img
+              src="level_up_skills.svg"
+              alt=""
+              className="absolute left-full -translate-x-1/2 scale-200"
+            />
+          </div>
         </div>
 
-        <div className={cardClass}>
-          <CardDetails
+        <div className={`col-span-4 ${cardClass}`}>
+          {/* <CardDetails
             title="🎉 Get Rewarded"
             description="Earn badges, unlock content, and show off your skills."
-            imgSrc="https://cataas.com/cat/gif"
-            imgClassName="rounded-lg w-[80%] mx-auto"
-          />
+            imgSrc="badges.svg"
+            imgClassName=""
+          /> */}
+
+          <div className="relative flex flex-row content-center h-full items-center">
+            <img src="badges.svg" alt="" className="w-2/3" />
+            <div className="flex flex-col gap-10 px-6 py-4 text-white w-1/3 items-end">
+              <h1 className="font-bold text-2xl mb-2">🎉 Get Rewarded</h1>
+              <p className="">
+                Earn badges, unlock content, and show off your skills.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className={`col-span-2 ${cardClass}`}>
@@ -94,7 +120,7 @@ function CardDetails({
   style = {},
 }: CardDetailsProps): ReactElement {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full gap-10">
       <div className="px-6 py-4">
         <h1 className="font-bold text-white text-2xl mb-2">{title}</h1>
         <p className="text-white">{description}</p>
