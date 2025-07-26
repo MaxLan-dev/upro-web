@@ -2,12 +2,12 @@ import { CSSProperties, ReactElement } from "react";
 
 export default function HowUProWorks(): ReactElement {
   const cardClass =
-    "bg-green-900 rounded-lg overflow-hidden flex flex-col h-96";
+    "bg-lime-950/70 rounded-lg overflow-hidden flex flex-col h-96";
 
   return (
-    <div className="flex flex-col gap-5 bg-black h-auto p-10">
-      <div className="flex flex-col gap-5 my-10">
-        <h1 className="text-center font-bold text-white text-5xl">
+    <div className="flex flex-col gap-5 bg-black h-auto p-10 ">
+      <div className="flex flex-col gap-10 my-10 w-1/2 mx-auto my-40">
+        <h1 className="text-center font-bold text-white text-5xl ">
           A New Way to Train Starts Here
         </h1>
         <p className="text-center text-white">
@@ -16,11 +16,32 @@ export default function HowUProWorks(): ReactElement {
           home.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-10">
+      <div className="grid grid-cols-3 gap-y-16 gap-x-10 w-4/5 mx-auto">
+        {/* <div className={cardClass}>05</div> */}
+
         <div className={`col-span-2 ${cardClass}`}>
-          <CardDetails title="Title" description="Description" />
+          <CardDetails
+            title="🧠 Capture Movement"
+            description="U-Pro uses your phone’s camera and our patent-pending AI
+            to track real-time biomechanics. No wearables. No setup. Just
+            hit record."
+            imgSrc="https://cataas.com/cat/gif"
+            imgClassName="rounded-lg"
+            style={{}}
+          />
         </div>
-        <div className={cardClass}>05</div>
+
+        <div className={`${cardClass}`}>
+          <CardDetails
+            title="📈 Level Up Skills"
+            description="Each session adapts to your player’s age and level.
+            Earn XP by completing challenges, improving form, and unlocking new
+            drills."
+            imgSrc="https://cataas.com/cat/gif"
+            imgClassName="rounded-lg"
+            style={{}}
+          />
+        </div>
 
         <div className={cardClass}>
           <CardDetails
