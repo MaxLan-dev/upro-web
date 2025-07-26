@@ -20,7 +20,32 @@ export default function HowUProWorks(): ReactElement {
         <div className={`col-span-2 ${cardClass}`}>
           <CardDetails title="Title" description="Description" />
         </div>
-        <div className={cardClass}>05</div>
+
+        {/* <div className={cardClass}>05</div> */}
+
+        <div className={`col-span-2 ${cardClass}`}>
+          <CardDetails
+            title="🧠 Capture Movement"
+            description="U-Pro uses your phone’s camera and our patent-pending AI
+            to track real-time biomechanics. No wearables. No setup. Just
+            hit record."
+            imgSrc="https://cataas.com/cat/gif"
+            imgClassName="rounded-lg"
+            style={{}}
+          />
+        </div>
+
+        <div className={`${cardClass}`}>
+          <CardDetails
+            title="📈 Level Up Skills"
+            description="Each session adapts to your player’s age and level.
+            Earn XP by completing challenges, improving form, and unlocking new
+            drills."
+            imgSrc="https://cataas.com/cat/gif"
+            imgClassName="rounded-lg"
+            style={{}}
+          />
+        </div>
 
         <div className={cardClass}>
           <CardDetails
