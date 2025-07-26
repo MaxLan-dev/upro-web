@@ -16,6 +16,12 @@ export default function HowUProWorks(): ReactElement {
   );
 }
 
+/**
+ * Returns a JSX element representing a card with a title and description.
+ * @param {string} title The title of the card.
+ * @param {string} description The description of the card.
+ * @returns {ReactElement} A JSX element representing a card with a title and description.
+ */
 function CardDetails(title: string, description: string): ReactElement {
   return (
     <div className="px-6 py-4">
