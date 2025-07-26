@@ -17,10 +17,6 @@ export default function HowUProWorks(): ReactElement {
         </p>
       </div>
       <div className="grid grid-cols-3 gap-10">
-        <div className={`col-span-2 ${cardClass}`}>
-          <CardDetails title="Title" description="Description" />
-        </div>
-
         {/* <div className={cardClass}>05</div> */}
 
         <div className={`col-span-2 ${cardClass}`}>
