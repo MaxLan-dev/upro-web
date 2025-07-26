@@ -2,7 +2,7 @@ import { CSSProperties, ReactElement } from "react";
 
 export default function HowUProWorks(): ReactElement {
   const cardClass =
-    "bg-green-900 rounded-lg overflow-hidden flex flex-col h-96";
+    "bg-lime-950/70 rounded-lg overflow-hidden flex flex-col h-96";
 
   return (
     <div className="flex flex-col gap-5 bg-black h-auto p-10">
