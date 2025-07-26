@@ -1,9 +1,11 @@
 import { ReactElement } from "react";
 
 export default function HowUProWorks(): ReactElement {
-  const cardClass = "bg-green-900 rounded-lg min-h-80";
+  const cardClass =
+    "bg-green-900 rounded-lg overflow-hidden flex flex-col h-96";
+
   return (
-    <div className="flex flex-col gap-5 bg-black h-screen p-10">
+    <div className="flex flex-col gap-5 bg-black h-auto p-10">
       <div className="flex flex-col gap-5 my-10">
         <h1 className="text-center font-bold text-white text-5xl">
           A New Way to Train Starts Here
@@ -19,8 +21,22 @@ export default function HowUProWorks(): ReactElement {
           {CardDetails("Title", "Description")}
         </div>
         <div className={cardClass}>05</div>
-        <div className={cardClass}>06</div>
-        <div className={`col-span-2 ${cardClass}`}>07</div>
+
+        <div className={cardClass}>
+          {CardDetails(
+            "🎉 Get Rewarded",
+            "Badges, cosmetics, leaderboards, and certificates turn training into a game. Kids stay motivated — and proud of their progress.",
+            "https://cataas.com/cat/gif"
+          )}
+        </div>
+
+        <div className={`col-span-2 ${cardClass}`}>
+          {CardDetails(
+            "👨‍👩‍👧 Train Together",
+            "Designed for siblings, parents, and teammates to join in. Build healthy habits and memories that last beyond the game.",
+            "https://cataas.com/cat/gif"
+          )}
+        </div>
       </div>
     </div>
   );
@@ -32,11 +48,22 @@ export default function HowUProWorks(): ReactElement {
  * @param {string} description The description of the card.
  * @returns {ReactElement} A JSX element representing a card with a title and description.
  */
-function CardDetails(title: string, description: string): ReactElement {
+function CardDetails(
+  title: string,
+  description: string,
+  imgSrc?: string
+): ReactElement {
   return (
-    <div className="px-6 py-4">
-      <h1 className="font-bold text-white text-2xl">{title}</h1>
-      <p className="text-white ">{description}</p>
+    <div className="flex flex-col h-full">
+      <div className="px-6 py-4">
+        <h1 className="font-bold text-white text-2xl">{title}</h1>
+        <p className="text-white">{description}</p>
+      </div>
+      {imgSrc ? (
+        <img src={imgSrc} alt="" className="" />
+      ) : (
+        <div className="bg-white grow"></div>
+      )}
     </div>
   );
 }
