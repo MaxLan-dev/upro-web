@@ -76,7 +76,7 @@ function CardDetails({
   return (
     <div className="flex flex-col h-full">
       <div className="px-6 py-4">
-        <h1 className="font-bold text-white text-2xl">{title}</h1>
+        <h1 className="font-bold text-white text-2xl mb-2">{title}</h1>
         <p className="text-white">{description}</p>
       </div>
       {imgSrc ? (
