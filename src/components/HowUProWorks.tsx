@@ -5,12 +5,14 @@ export default function HowUProWorks(): ReactElement {
     "bg-lime-950/70 rounded-lg  overflow-hidden flex flex-col h-96";
 
   return (
-    <div className="flex flex-col gap-5 bg-black h-auto p-10 ">
-      <div className="flex flex-col gap-10 my-10 w-1/2 mx-auto my-40">
-        <h1 className="text-center font-bold text-white text-5xl ">
-          A New Way to Train Starts Here
+    <div className="flex flex-col gap-5 bg-black h-auto p-8 ">
+      <div className="flex flex-col gap-10 my-10 max-w-3xl items-center mx-auto">
+        <h1 className="text-center font-bold text-white text-3xl md:text-5xl transition-all duration-1000 ease-out">
+          A New Way to Train
+          <br />
+          Starts Here
         </h1>
-        <p className="text-center text-white">
+        <p className="text-lg md:text-xl text-center text-white transition-all duration-1000 ease-out delay-200">
           No more boring drills. No more wasted screen time. With U-Pro, kids
           learn real soccer skills through fun, personalized missions — all from
           home.
