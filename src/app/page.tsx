@@ -1,9 +1,9 @@
-import Hero from "@/components/Hero";
-import ElevatorPitchSection from "@/components/ElevatorPitchSection";
-import { TestimonialSection } from "@/components/TestimonialSection";
-import HowUProWorks from "@/components/HowUProWorks";
-import TrustedByExpertsSection from "@/components/TrustedByExpertsSection";
 import CallToActionPage from "@/components/CallToActionPage";
+import ElevatorPitchSection from "@/components/ElevatorPitchSection";
+import Hero from "@/components/Hero";
+import HowUProWorks from "@/components/HowUProWorks";
+import { TestimonialSection } from "@/components/TestimonialSection";
+import TrustedByExpertsSection from "@/components/TrustedByExpertsSection";
 
 // Server Component - rendered on the server
 export default function Home() {
@@ -16,12 +16,11 @@ export default function Home() {
     >
       <Hero />
 
-       <HowUProWorks />
+      <HowUProWorks />
       <ElevatorPitchSection />
       <TrustedByExpertsSection />
       <TestimonialSection />
       <CallToActionPage />
     </main>
-
   );
 }

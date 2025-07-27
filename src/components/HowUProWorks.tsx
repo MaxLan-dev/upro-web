@@ -7,12 +7,28 @@ export default function HowUProWorks(): ReactElement {
   return (
     <div className="flex flex-col gap-5 bg-black h-auto p-8 ">
       <div className="flex flex-col gap-10 mt-20 lg:mt-40 mb-10 max-w-3xl items-center mx-auto">
-        <h1 className="text-center font-bold text-white text-3xl md:text-5xl transition-all duration-1000 ease-out">
+        <h1
+          className="text-center font-bold text-white text-3xl md:text-5xl transition-all duration-1000 ease-out"
+          style={{
+            fontFamily: "THE BOLD FONT",
+            fontWeight: 900,
+            color: "#D7E4D7",
+          }}
+        >
           A New Way to Train
           <br />
           Starts Here
         </h1>
-        <p className="text-lg md:text-xl text-center text-white transition-all duration-1000 ease-out delay-200">
+        <p
+          className="text-white font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl  text-center  transition-all duration-1000 ease-out delay-200"
+          style={{
+            fontFamily:
+              "Montserrat, -apple-system, Roboto, Helvetica, sans-serif",
+            color: "#D7E4D7",
+            letterSpacing: "-0.12px",
+            lineHeight: "1.33",
+          }}
+        >
           No more boring drills. No more wasted screen time. With U-Pro, kids
           learn real soccer skills through fun, personalized missions — all from
           home.
@@ -131,8 +147,28 @@ function CardDetails({
       className={`transition-all duration-500 ease-out ${contentClassName || "flex flex-col h-full gap-5"}`}
     >
       <div className={`${headerClassName || "px-6 py-4 flex flex-col gap-2"}`}>
-        <h1 className="font-bold text-white text-2xl mb-2">{title}</h1>
-        <p className="text-white">{description}</p>
+        <h1
+          className="font-bold text-white text-2xl mb-2"
+          style={{
+            fontFamily: "THE BOLD FONT",
+            fontWeight: 900,
+            color: "#D7E4D7",
+          }}
+        >
+          {title}
+        </h1>
+        <p
+          className="text-white font-bold"
+          style={{
+            fontFamily:
+              "Montserrat, -apple-system, Roboto, Helvetica, sans-serif",
+            color: "#D7E4D7",
+            letterSpacing: "-0.12px",
+            lineHeight: "1.33",
+          }}
+        >
+          {description}
+        </p>
       </div>
       {imgSrc ? (
         <img
