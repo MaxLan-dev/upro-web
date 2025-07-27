@@ -18,18 +18,20 @@ export default function HowUProWorks(): ReactElement {
       </div>
 
       <div className="grid grid-cols-6 gap-y-16 gap-x-10 w-4/5 mx-auto">
-        <div className={`col-span-3 overflow-visible ${cardClass}`}>
+        {/* Capture Movement */}
+        <div className={`col-span-3  ${cardClass}`}>
           <CardDetails
             title="Capture Movement"
             description="U-Pro uses your phone’s camera and our patent-pending AI
             to track real-time biomechanics. No wearables. No setup. Just
             hit record."
             imgSrc="tracking.png"
-            imgClassName="rounded-lg w-2/3 mx-auto shadow-2xl shadow-green-400"
+            imgClassName="rounded-lg w-2/3 mx-auto"
             style={{}}
           />
         </div>
-        // Level Up Skills
+
+        {/* Level Up Skills */}
         <div className={`col-span-3 h-64 overflow-visible ${cardClass} `}>
           <div className="relative flex flex-row  h-full ">
             <div className="flex flex-col gap-2 px-6 py-4 text-white w-2/3 justify-start items-start">
@@ -47,6 +49,8 @@ export default function HowUProWorks(): ReactElement {
             />
           </div>
         </div>
+
+        {/* Get Rewarded */}
         <div className={`col-span-4 ${cardClass}`}>
           <div className="relative flex flex-row content-center h-full items-center">
             <img
@@ -64,6 +68,8 @@ export default function HowUProWorks(): ReactElement {
             </div>
           </div>
         </div>
+
+        {/* Train Together */}
         <div className={`col-span-2 ${cardClass}`}>
           <CardDetails
             title="Train Together"
@@ -101,7 +107,7 @@ function CardDetails({
       {imgSrc ? (
         <img
           src={imgSrc}
-          alt=""
+          alt={`${imgSrc}_image`}
           className={`shadow-2xl shadow-green-400 ${imgClassName}`}
           style={style} // directly pass object here
         />
