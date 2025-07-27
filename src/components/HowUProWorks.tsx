@@ -112,7 +112,7 @@ function CardDetails({
 }: CardDetailsProps): ReactElement {
   return (
     <div className="flex flex-col h-full gap-5">
-      <div className="px-6 py-4">
+      <div className="px-6 py-4 flex flex-col gap-2">
         <h1 className="font-bold text-white text-2xl mb-2">{title}</h1>
         <p className="text-white">{description}</p>
       </div>
