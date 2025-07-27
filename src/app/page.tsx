@@ -3,7 +3,7 @@ import ElevatorPitchSection from "@/components/ElevatorPitchSection";
 import { TestimonialSection } from "@/components/TestimonialSection";
 import TrustedByExpertsSection from "@/components/TrustedByExpertsSection";
 import CallToActionPage from "@/components/CallToActionPage";
-import { Sponsors } from "@/components/Sponsors";
+import { TrainingPartner } from "@/components/TrainingPartner";
 
 // Server Component - rendered on the server
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <ElevatorPitchSection />
       <TrustedByExpertsSection />
       <TestimonialSection />
-      <Sponsors />
+      <TrainingPartner />
       <CallToActionPage />
     </main>
   );
