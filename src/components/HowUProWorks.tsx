@@ -51,20 +51,33 @@ export default function HowUProWorks(): ReactElement {
 
         {/* Get Rewarded */}
         <div className={`col-span-4 ${cardClass}`}>
-          <div className="relative flex flex-row content-center h-full items-center">
-            <img
-              src="badges.svg"
-              alt=""
-              className="h-full shadow-2xl shadow-green-400"
-            />
-            <div className="flex flex-col gap-10 px-6 py-4 text-white">
-              <h1 className="font-bold text-2xl mb-2 text-center">
-                Get Rewarded
-              </h1>
+          <div className=" flex flex-row-reverse  h-full justify-start items-start gap-5">
+            <div className="flex flex-col gap-2 px-6 py-4 text-white  ">
+              <h1 className="font-bold text-2xl mb-2 ">Get Rewarded</h1>
               <p className="">
                 Earn badges, unlock content, and show off your skills.
               </p>
             </div>
+
+            <img
+              src="badges.svg"
+              alt=""
+              className="w-4/9"
+              style={{
+                WebkitMaskImage: `
+              radial-gradient(circle at bottom right, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%),
+              radial-gradient(circle at top right, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%),
+              linear-gradient(to left, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0) 100%)
+            `,
+                maskImage: `
+              radial-gradient(circle at bottom right, rgba(0,0,0,0.1) 90%, rgba(0,0,0,0) 100%),
+              radial-gradient(circle at top right, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0) 100%),
+              linear-gradient(to left, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0) 100%)
+            `,
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+              }}
+            />
           </div>
         </div>
 
