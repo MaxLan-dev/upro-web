@@ -26,8 +26,7 @@ export default function HowUProWorks(): ReactElement {
             to track real-time biomechanics. No wearables. No setup. Just
             hit record."
             imgSrc="tracking.png"
-            imgClassName="rounded-lg w-2/3 mx-auto"
-            style={{}}
+            imgClassName="rounded-lg w-7/12 mx-auto"
           />
         </div>
 
@@ -99,7 +98,7 @@ function CardDetails({
   style = {},
 }: CardDetailsProps): ReactElement {
   return (
-    <div className="flex flex-col h-full gap-10">
+    <div className="flex flex-col h-full gap-5">
       <div className="px-6 py-4">
         <h1 className="font-bold text-white text-2xl mb-2">{title}</h1>
         <p className="text-white">{description}</p>
