@@ -16,6 +16,7 @@ export default function HowUProWorks(): ReactElement {
           home.
         </p>
       </div>
+
       <div className="grid grid-cols-6 gap-y-16 gap-x-10 w-4/5 mx-auto">
         <div className={`col-span-3 overflow-visible ${cardClass}`}>
           <CardDetails
@@ -28,25 +29,24 @@ export default function HowUProWorks(): ReactElement {
             style={{}}
           />
         </div>
-
+        // Level Up Skills
         <div className={`col-span-3 h-64 overflow-visible ${cardClass} `}>
-          <div className="relative flex flex-row content-center h-full items-center">
-            <div className="flex flex-col gap-10 px-6 py-4 text-white w-2/3">
+          <div className="relative flex flex-row  h-full ">
+            <div className="flex flex-col gap-2 px-6 py-4 text-white w-2/3 justify-start items-start">
               <h1 className="font-bold text-2xl mb-2">Level Up Skills</h1>
               <p className="">
                 Each session adapts to your player’s age and level. Earn XP by
                 completing challenges, improving form, and unlocking new drills.
               </p>
             </div>
-            <div className="w-1/3"></div>
+
             <img
               src="level_up_skills.svg"
-              alt=""
-              className="absolute left-full -translate-x-1/2 scale-200 shadow-lg shadow-green-800"
+              alt="level_up_skills image"
+              className="shadow-lg shadow-green-800 p-4"
             />
           </div>
         </div>
-
         <div className={`col-span-4 ${cardClass}`}>
           <div className="relative flex flex-row content-center h-full items-center">
             <img
@@ -64,7 +64,6 @@ export default function HowUProWorks(): ReactElement {
             </div>
           </div>
         </div>
-
         <div className={`col-span-2 ${cardClass}`}>
           <CardDetails
             title="Train Together"
