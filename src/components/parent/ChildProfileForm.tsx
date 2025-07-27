@@ -43,7 +43,6 @@ export function ChildProfileForm({
     dominant_foot: initialData?.dominant_foot,
     playing_position: initialData?.playing_position || "",
     experience_total: initialData?.experience_total || 0,
-    upro_gold: initialData?.upro_gold || 0,
     profile_picture: initialData?.profile_picture || "",
   });
 
@@ -278,24 +277,6 @@ export function ChildProfileForm({
               />
             </div>
 
-            {/* Upro Gold */}
-            <div className="space-y-2">
-              <Label htmlFor="upro_gold">Upro Gold</Label>
-              <Input
-                id="upro_gold"
-                type="number"
-                min="0"
-                step="1"
-                value={formData.upro_gold || ""}
-                onChange={e =>
-                  updateFormData(
-                    "upro_gold",
-                    e.target.value ? parseInt(e.target.value) : 0
-                  )
-                }
-                className="w-full"
-              />
-            </div>
 
             {/* Profile Picture */}
             <div className="space-y-2">
