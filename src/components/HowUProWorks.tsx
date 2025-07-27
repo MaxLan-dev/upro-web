@@ -6,7 +6,7 @@ export default function HowUProWorks(): ReactElement {
 
   return (
     <div className="flex flex-col gap-5 bg-black h-auto p-8 ">
-      <div className="flex flex-col gap-10 my-10 max-w-3xl items-center mx-auto">
+      <div className="flex flex-col gap-10 my-40 max-w-3xl items-center mx-auto">
         <h1 className="text-center font-bold text-white text-3xl md:text-5xl transition-all duration-1000 ease-out">
           A New Way to Train
           <br />
