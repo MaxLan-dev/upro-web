@@ -70,7 +70,63 @@ export function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12">
             {/* Primary nav links */}
-            <ul className="flex items-center gap-10" role="menubar"></ul>
+
+            <ul className="flex items-center gap-10" role="menubar">
+              <li role="none">
+                <Link
+                  href="#features"
+                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
+                  role="menuitem"
+                >
+                  Features
+                </Link>
+              </li>
+              <li role="none">
+                <Link
+                  href="#pricing"
+                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
+                  role="menuitem"
+                >
+                  Pricing
+                </Link>
+              </li>
+              <li role="none">
+                <Link
+                  href="#contact"
+                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
+                  role="menuitem"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li role="none">
+                <Link
+                  href="#partners"
+                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
+                  role="menuitem"
+                >
+                  Partners
+                </Link>
+              </li>
+              <li role="none">
+                <Link
+                  href="#testimonials"
+                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
+                  role="menuitem"
+                >
+                  Testimonials
+                </Link>
+              </li>
+              <li role="none">
+                <Link
+                  href="#experts"
+                  className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
+                  role="menuitem"
+                >
+                  Trusted By Experts
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Right - secondary actions */}
@@ -220,7 +276,7 @@ export function Navbar() {
                   Features
                 </Link>
                 <Link
-                  href="/pricing"
+                  href="#pricing"
                   className="block text-white hover:text-[#00FF3C] py-2 text-base focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2"
                   role="menuitem"
                 >
@@ -234,7 +290,7 @@ export function Navbar() {
                   Contact
                 </Link>
                 <Link
-                  href="/partners"
+                  href="#partners"
                   className="block text-white hover:text-[#00FF3C] py-2 text-base focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2"
                   role="menuitem"
                 >
