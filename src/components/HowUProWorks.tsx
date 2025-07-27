@@ -2,11 +2,11 @@ import { CSSProperties, ReactElement } from "react";
 
 export default function HowUProWorks(): ReactElement {
   const cardClass =
-    "bg-lime-950/70 rounded-lg p-7 overflow-hidden flex flex-col h-auto lg:h-96";
+    "bg-lime-950/70 rounded-lg overflow-hidden flex flex-col h-auto lg:h-96";
 
   return (
     <div className="flex flex-col gap-5 bg-black h-auto p-8 ">
-      <div className="flex flex-col gap-10 my-40 max-w-3xl items-center mx-auto">
+      <div className="flex flex-col gap-10 mt-20 lg:mt-40 mb-10 max-w-3xl items-center mx-auto">
         <h1 className="text-center font-bold text-white text-3xl md:text-5xl transition-all duration-1000 ease-out">
           A New Way to Train
           <br />
@@ -20,7 +20,7 @@ export default function HowUProWorks(): ReactElement {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-col-1 md:grid-cols-6 gap-y-16 gap-x-10 px-6 py-20 container mx-auto">
+      <div className="grid grid-col-1 md:grid-cols-6 gap-10 lg:gap-y-16 lg:gap-x-10 px-6 py-20  mx-auto">
         {/* Capture Movement */}
         <div className={`col-span-3  ${cardClass}`}>
           <CardDetails
