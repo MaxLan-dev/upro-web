@@ -4,7 +4,8 @@
 - ✅ **Description** – What, Why, How (include a link to issue number)
 - ✅ **Screenshots/Demo** – Add screenshots, videos, or Looms if visual
 
-### Discord Name: 
+### Discord Name:
+
 <!-- johnville123 --->
 
 ---

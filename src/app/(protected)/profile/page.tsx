@@ -36,52 +36,38 @@ export default function ProfilePage() {
 
   const [submitting, setSubmitting] = useState(false);
 
-  // 获取当前 account_id
   useEffect(() => {
     if (!user) return;
-
     const getAccountId = async () => {
       const { data, error } = await supabase.rpc("get_current_account_id");
-      if (error) {
-        console.error("Error getting account ID:", error);
-      } else {
-        setAccountId(data);
-      }
+      if (!error) setAccountId(data);
     };
-
     getAccountId();
   }, [user]);
 
-  // 获取 profiles（用户列表）
   useEffect(() => {
     if (!accountId) return;
-
     const fetchProfiles = async () => {
       setLoadingProfiles(true);
       const { data, error } = await supabase
         .from("users")
         .select("id, name, gender, age_group")
         .eq("account_id", accountId);
-
-      if (error) {
-        console.error("Error loading profiles:", error);
-      } else {
-        setProfiles(data);
-      }
+      if (!error && data) setProfiles(data);
       setLoadingProfiles(false);
     };
-
     fetchProfiles();
   }, [accountId]);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!accountId) return;
-
     setSubmitting(true);
     const { error } = await supabase.from("users").insert({
       account_id: accountId,
@@ -89,69 +75,60 @@ export default function ProfilePage() {
       gender: form.gender,
       age_group: Number(form.age_group),
     });
-
-    if (error) {
-      console.error("Error creating profile:", error);
-    } else {
-      // 清空表单 & 刷新列表
+    if (!error) {
       setForm({ name: "", gender: "", age_group: "" });
       const { data } = await supabase
         .from("users")
         .select("id, name, gender, age_group")
         .eq("account_id", accountId);
-      setProfiles(data || []);
+      if (data) setProfiles(data);
     }
-
     setSubmitting(false);
   };
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] p-8">
-      <div className="max-w-2xl mx-auto space-y-12">
-        <div>
-          <h1 className="text-3xl font-bold mb-6">Profile</h1>
-          <Card>
+    <main className="min-h-screen bg-[#0d1b16] text-white px-6 py-12">
+      <div className="max-w-3xl mx-auto space-y-12">
+        <section>
+          <h1 className="text-3xl font-bold text-[#d0f0e9] mb-6">Profile</h1>
+          <Card className="bg-[#121e1a] text-white border-[#1f2d29]">
             <CardHeader>
-              <CardTitle>User Profile</CardTitle>
+              <CardTitle className="text-[#cce7e1]">User Profile</CardTitle>
               <CardDescription>Your account information</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label className="text-sm font-medium">Email</Label>
+                <Label className="text-[#cce7e1]">Email</Label>
                 <p className="text-sm text-muted-foreground">{user?.email}</p>
               </div>
               <div>
-                <Label className="text-sm font-medium">User ID</Label>
-                <p className="text-sm text-muted-foreground font-mono">
-                  {user?.id}
-                </p>
+                <Label className="text-[#cce7e1]">User ID</Label>
+                <p className="text-sm text-muted-foreground font-mono">{user?.id}</p>
               </div>
               <div>
-                <Label className="text-sm font-medium">Created</Label>
+                <Label className="text-[#cce7e1]">Created</Label>
                 <p className="text-sm text-muted-foreground">
-                  {user?.created_at
-                    ? new Date(user.created_at).toLocaleDateString()
-                    : "N/A"}
+                  {user?.created_at ? new Date(user.created_at).toLocaleDateString() : "N/A"}
                 </p>
               </div>
             </CardContent>
           </Card>
-        </div>
+        </section>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Profiles under your account</h2>
+        <section className="bg-[#121e1a] p-6 rounded-lg shadow-sm border border-[#1f2d29] space-y-4">
+          <h2 className="text-xl font-semibold text-[#d0f0e9]">Profiles under your account</h2>
           {loadingProfiles ? (
-            <p>Loading profiles...</p>
+            <p className="text-center text-muted-foreground">Loading profiles...</p>
           ) : profiles.length === 0 ? (
-            <p className="text-muted-foreground">No profiles found.</p>
+            <p className="text-center text-muted-foreground">No profiles found.</p>
           ) : (
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {profiles.map((p) => (
                 <li
                   key={p.id}
-                  className="border border-gray-200 rounded-lg p-4 shadow-sm"
+                  className="border border-[#2e423b] rounded-lg p-4 shadow-sm bg-[#1a2a25]"
                 >
-                  <p className="font-semibold">{p.name}</p>
+                  <p className="font-semibold text-white">{p.name}</p>
                   <p className="text-sm text-muted-foreground">
                     Gender: {p.gender}, Age Group: {p.age_group}
                   </p>
@@ -159,30 +136,31 @@ export default function ProfilePage() {
               ))}
             </ul>
           )}
-        </div>
+        </section>
 
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Create a new profile</h2>
+        <section className="bg-[#121e1a] p-6 rounded-lg shadow-sm border border-[#1f2d29] space-y-4">
+          <h2 className="text-xl font-semibold text-[#d0f0e9]">Create a new profile</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <Label htmlFor="name">Name</Label>
+              <Label htmlFor="name" className="text-[#cce7e1]">Name</Label>
               <Input
                 id="name"
                 name="name"
                 value={form.name}
                 onChange={handleInputChange}
                 required
+                className="bg-[#1a2a25] border-[#2e423b] text-white"
               />
             </div>
             <div>
-              <Label htmlFor="gender">Gender</Label>
+              <Label htmlFor="gender" className="text-[#cce7e1]">Gender</Label>
               <select
                 id="gender"
                 name="gender"
                 value={form.gender}
                 onChange={handleInputChange}
                 required
-                className="w-full border border-input bg-background rounded-md px-3 py-2 text-sm"
+                className="w-full bg-[#1a2a25] border border-[#2e423b] rounded-md px-3 py-2 text-sm text-white"
               >
                 <option value="">Select</option>
                 <option value="male">Male</option>
@@ -191,7 +169,7 @@ export default function ProfilePage() {
               </select>
             </div>
             <div>
-              <Label htmlFor="age_group">Age Group</Label>
+              <Label htmlFor="age_group" className="text-[#cce7e1]">Age Group</Label>
               <Input
                 id="age_group"
                 name="age_group"
@@ -199,14 +177,21 @@ export default function ProfilePage() {
                 value={form.age_group}
                 onChange={handleInputChange}
                 required
+                className="bg-[#1a2a25] border-[#2e423b] text-white"
               />
             </div>
-            <Button type="submit" disabled={submitting}>
-              {submitting ? "Creating..." : "Create Profile"}
-            </Button>
+            <div className="flex justify-end">
+              <Button
+                type="submit"
+                disabled={submitting}
+                className="bg-[#3be58f] text-black hover:bg-[#33d97f]"
+              >
+                {submitting ? "Creating..." : "Create Profile"}
+              </Button>
+            </div>
           </form>
-        </div>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }

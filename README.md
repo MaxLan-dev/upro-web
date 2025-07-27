@@ -39,6 +39,8 @@ A modern Next.js application built with TypeScript, Supabase authentication, and
 
 ### Supabase Setup
 
+> 📋 **Quick Setup**: Check out our detailed [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) guide (recommended if you want to use CLI, if not the one below works fine)
+
 1. **Create a Supabase Account**
 
    Visit [supabase.com](https://supabase.com) and create a free account.
