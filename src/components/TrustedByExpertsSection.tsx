@@ -1,62 +1,65 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function TrustedByExpertsSection() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Expert Coaching at Home Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Expert Coaching at Home
-            </h1>
-            <p className="text-xl text-gray-300">
-              No more hunting for good coaches.
-            </p>
-            <Button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-6 text-lg rounded-full">
-              Learn More
-            </Button>
-          </div>
-          <div className="relative">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden">
-              <Image
-                src="/TrustedByExpertsPhotos/coach-Coaching.jpeg"
-                alt="Father and child playing soccer at home"
-                width={600}
-                height={400}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+    <section
+      id="experts"
+      className="relative overflow-hidden min-h-screen flex items-center justify-center bg-[#020d02]"
+      role="region"
+      aria-labelledby="experts-heading"
+    >
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-24">
+          {/* Text Content */}
+          <div className="flex-1 space-y-6 lg:space-y-10 text-center lg:text-left">
+            <div className="space-y-4 lg:space-y-5">
+              <h2
+                id="experts-heading"
+                className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black leading-tight tracking-tight mb-8 lg:mb-12"
+                style={{
+                  fontFamily: "THE BOLD FONT",
+                  fontWeight: 900,
+                  color: "#D7E4D7",
+                }}
+              >
+                BUILT WITH EXPERTS.
+                <br className="hidden sm:block" />
+                BACKED BY LEADERS.
+              </h2>
 
-      {/* Flexible Schedule Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1 relative">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden">
-              <Image
-                src="/TrustedByExpertsPhotos/child-practicing.jpeg"
-                alt="Child practicing soccer indoors"
-                width={600}
-                height={400}
-                className="w-full h-auto"
-              />
+              <p
+                className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-normal leading-relaxed max-w-2xl"
+                style={{
+                  color: "#D7E4D7",
+                  fontFamily:
+                    "Montserrat, -apple-system, Roboto, Helvetica, sans-serif",
+                  letterSpacing: "-0.12px",
+                  lineHeight: "1.33",
+                }}
+              >
+                U-Pro Soccer combines leading-edge technology with real-world
+                coaching insight. Our system has been tested by families,
+                reviewed by sports scientists, and supported by some of
+                Canada&apos;s top innovation programs.
+              </p>
             </div>
           </div>
-          <div className="order-1 lg:order-2 space-y-6">
-            <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Flexible Schedule
-            </h2>
-            <p className="text-xl text-gray-300">Train when you want.</p>
-            <Button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-8 py-6 text-lg rounded-full">
-              Explore Options
-            </Button>
+
+          {/* Image */}
+          <div className="flex-1 w-full">
+            <Image
+              src="https://api.builder.io/api/v1/image/assets/TEMP/633b73195c921bd63c98f5ff51ff6ce964300c2b?width=1248"
+              alt="Child practicing soccer drills in a bright living room with a professional coach demonstrating techniques, showcasing U-Pro's expert-backed training approach"
+              className="w-full h-auto rounded-xl lg:rounded-3xl shadow-lg"
+              width={624}
+              height={485}
+              style={{
+                objectFit: "cover",
+              }}
+            />
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

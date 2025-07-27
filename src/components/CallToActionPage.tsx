@@ -1,118 +1,62 @@
-"use client";
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Smartphone, Download } from "lucide-react";
-
-const CallToActionPage = () => {
+export default function CallToActionPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center p-4">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Main Content Card */}
-        <Card className="border-0 shadow-2xl bg-white/80 backdrop-blur-sm">
-          <CardContent className="p-12 md:p-16">
-            {/* Icon */}
-            <div className="mb-8">
-              <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-green-600 rounded-full flex items-center justify-center shadow-lg">
-                <Smartphone className="w-10 h-10 text-white" />
-              </div>
-            </div>
+    <section
+      id="contact"
+      className="bg-black relative overflow-hidden flex items-center justify-center"
+      role="region"
+      aria-labelledby="cta-heading"
+    >
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-16">
+        {/* Left Content */}
+        <div className="flex-1 max-w-2xl">
+          <h2
+            id="cta-heading"
+            className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-black leading-tight tracking-tight mb-8 lg:mb-12"
+            style={{
+              fontFamily: "THE BOLD FONT",
+              fontWeight: 900,
+              color: "#D7E4D7",
+            }}
+          >
+            READY TO START THE JOURNEY?
+          </h2>
+          <p
+            className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-normal leading-relaxed max-w-2xl"
+            style={{
+              color: "#D7E4D7",
+              fontFamily:
+                "Montserrat, -apple-system, Roboto, Helvetica, sans-serif",
+              letterSpacing: "-0.12px",
+              lineHeight: "1.33",
+            }}
+          >
+            Download the app and start your free training experience today. No
+            equipment needed — just a phone, a ball, and a love for the game.
+          </p>
+        </div>
 
-            {/* Headline */}
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-green-600 bg-clip-text text-transparent mb-6 leading-tight">
-              Ready to Start the Journey?
-            </h1>
-
-            {/* Subtext */}
-            <p className="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Download the app and start your free training experience today. No
-              equipment needed — just a phone, a ball, and a love for the game.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 min-w-[200px]"
-                onClick={() => window.open("https://apps.apple.com", "_blank")}
-              >
-                <div className="flex items-center gap-3">
-                  <Download className="w-5 h-5" />
-                  <div className="text-left">
-                    <div className="text-xs text-gray-300">Download on the</div>
-                    <div className="text-sm font-bold">App Store</div>
-                  </div>
-                </div>
-              </Button>
-
-              <Button
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 min-w-[200px]"
-                onClick={() => window.open("https://play.google.com", "_blank")}
-              >
-                <div className="flex items-center gap-3">
-                  <Download className="w-5 h-5" />
-                  <div className="text-left">
-                    <div className="text-xs text-green-100">Get it on</div>
-                    <div className="text-sm font-bold">Google Play</div>
-                  </div>
-                </div>
-              </Button>
-            </div>
-
-            {/* Additional Features */}
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <Smartphone className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">
-                  Mobile First
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Train anywhere with just your phone
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
-                    <div className="w-3 h-3 bg-white rounded-full"></div>
-                  </div>
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">
-                  Just a Ball
-                </h3>
-                <p className="text-sm text-gray-600">
-                  No expensive equipment required
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-12 h-12 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 text-purple-600">❤</div>
-                </div>
-                <h3 className="font-semibold text-gray-800 mb-2">
-                  Love for Game
-                </h3>
-                <p className="text-sm text-gray-600">
-                  Passion is all you need to start
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-green-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-purple-200 rounded-full opacity-20 animate-pulse delay-500"></div>
+        {/* Right Content - App Store Buttons */}
+        <div
+          className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 lg:gap-6 flex-shrink-0"
+          role="group"
+          aria-label="Download app"
+        >
+          <button
+            className="w-full bg-upro-green text-black font-medium text-lg lg:text-xl px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-[#020d02]"
+            type="button"
+            aria-label="Download U-Pro Soccer from App Store"
+          >
+            App Store
+          </button>
+          <button
+            className="w-full bg-upro-green text-black font-medium text-lg lg:text-xl px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-[#020d02]"
+            type="button"
+            aria-label="Download U-Pro Soccer from Google Play Store"
+          >
+            Google Play
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default CallToActionPage;
+}
