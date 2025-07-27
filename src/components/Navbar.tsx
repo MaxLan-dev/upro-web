@@ -92,7 +92,7 @@ export function Navbar() {
               </li>
               <li role="none">
                 <Link
-                  href="#pricing"
+                  href="/pricing"
                   className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
                   role="menuitem"
                 >
@@ -110,7 +110,7 @@ export function Navbar() {
               </li>
               <li role="none">
                 <Link
-                  href="#partners"
+                  href="/partners"
                   className="flex items-center gap-1 text-base text-white hover:text-[#00FF3C] focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1"
                   role="menuitem"
                 >
@@ -293,7 +293,7 @@ export function Navbar() {
                   Features
                 </Link>
                 <Link
-                  href="#pricing"
+                  href="/pricing"
                   className="block text-white hover:text-[#00FF3C] py-2 text-base focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2"
                   role="menuitem"
                 >
@@ -307,7 +307,7 @@ export function Navbar() {
                   Contact
                 </Link>
                 <Link
-                  href="#partners"
+                  href="/partners"
                   className="block text-white hover:text-[#00FF3C] py-2 text-base focus:outline-none focus:ring-2 focus:ring-upro-green focus:ring-offset-2 focus:ring-offset-black rounded px-2"
                   role="menuitem"
                 >
