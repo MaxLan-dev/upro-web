@@ -1,5 +1,7 @@
-import Hero from "@/components/Hero";
+import CallToActionPage from "@/components/CallToActionPage";
 import ElevatorPitchSection from "@/components/ElevatorPitchSection";
+import Hero from "@/components/Hero";
+import HowUProWorks from "@/components/HowUProWorks";
 import { TestimonialSection } from "@/components/TestimonialSection";
 import TrustedByExpertsSection from "@/components/TrustedByExpertsSection";
 import CallToActionPage from "@/components/CallToActionPage";
@@ -15,6 +17,7 @@ export default function Home() {
       aria-label="U-Pro Soccer homepage"
     >
       <Hero />
+      <HowUProWorks />
       <ElevatorPitchSection />
       <TrustedByExpertsSection />
       <TestimonialSection />
