@@ -1,7 +1,10 @@
 import Image from "next/image";
 
 const sponsors = [
-  { src: "/images/sponsors-banner/boston_market_lab.png", alt: "Government of Canada" },
+  {
+    src: "/images/sponsors-banner/boston_market_lab.png",
+    alt: "Government of Canada",
+  },
   { src: "/images/sponsors-banner/ElevateIP.png", alt: "ElevateIP" },
   {
     src: "/images/sponsors-banner/Office of the Privacy Commissioner.png",
