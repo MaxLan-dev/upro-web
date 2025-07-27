@@ -69,17 +69,8 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-12">
-            {/* Search functionality */}
-            <div className="relative">
-              <input
-                type="search"
-                placeholder="Search..."
-                className="bg-white/10 text-white placeholder-white/60 px-4 py-2 rounded-lg border border-white/20 focus:outline-none focus:ring-2 focus:ring-upro-green focus:border-transparent w-48"
-                aria-label="Search U-Pro Soccer content"
-              />
-            </div>
-
             {/* Primary nav links */}
+
             <ul className="flex items-center gap-10" role="menubar">
               <li role="none">
                 <Link
@@ -140,14 +131,6 @@ export function Navbar() {
 
           {/* Right - secondary actions */}
           <div className="flex items-center gap-4 lg:gap-6">
-            {/* Download app - hidden on mobile */}
-            <Link
-              href="#"
-              className="hidden lg:inline text-white hover:text-[#00FF3C]"
-            >
-              Download app
-            </Link>
-
             {/* Auth Section */}
             {loading ? (
               <div className="w-8 h-8 animate-pulse bg-white/20 rounded-full" />
