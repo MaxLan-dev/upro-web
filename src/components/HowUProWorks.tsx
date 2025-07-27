@@ -20,7 +20,7 @@ export default function HowUProWorks(): ReactElement {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-6 gap-y-16 gap-x-10 w-4/5 mx-auto">
+      <div className="grid grid-cols-6 gap-y-16 gap-x-10 px-6 py-20 container mx-auto">
         {/* Capture Movement */}
         <div className={`col-span-3  ${cardClass}`}>
           <CardDetails
@@ -35,7 +35,7 @@ export default function HowUProWorks(): ReactElement {
         </div>
 
         {/* Level Up Skills */}
-        <div className={`col-span-3 h-64 overflow-visible ${cardClass} `}>
+        <div className={`col-span-3  ${cardClass} `}>
           <CardDetails
             title="Level Up Skills"
             description="Each session adapts to your player’s age and level. Earn XP by
