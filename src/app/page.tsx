@@ -6,6 +6,7 @@ import { TestimonialSection } from "@/components/TestimonialSection";
 import TrustedByExpertsSection from "@/components/TrustedByExpertsSection";
 import CallToActionPage from "@/components/CallToActionPage";
 import { TrainingPartner } from "@/components/TrainingPartner";
+import { Sponsors } from "@/components/Sponsors";
 
 // Server Component - rendered on the server
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <TrustedByExpertsSection />
       <TestimonialSection />
       <TrainingPartner />
+      <Sponsors />
       <CallToActionPage />
     </main>
   );
