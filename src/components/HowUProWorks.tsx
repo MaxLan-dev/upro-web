@@ -21,7 +21,7 @@ export default function HowUProWorks(): ReactElement {
 
         <div className={`col-span-3 overflow-visible ${cardClass}`}>
           <CardDetails
-            title="🧠 Capture Movement"
+            title="Capture Movement"
             description="U-Pro uses your phone’s camera and our patent-pending AI
             to track real-time biomechanics. No wearables. No setup. Just
             hit record."
@@ -34,7 +34,7 @@ export default function HowUProWorks(): ReactElement {
         <div className={`col-span-3 h-64 overflow-visible ${cardClass} `}>
           <div className="relative flex flex-row content-center h-full items-center">
             <div className="flex flex-col gap-10 px-6 py-4 text-white w-2/3">
-              <h1 className="font-bold text-2xl mb-2">📈 Level Up Skills</h1>
+              <h1 className="font-bold text-2xl mb-2">Level Up Skills</h1>
               <p className="">
                 Each session adapts to your player’s age and level. Earn XP by
                 completing challenges, improving form, and unlocking new drills.
@@ -58,7 +58,7 @@ export default function HowUProWorks(): ReactElement {
             />
             <div className="flex flex-col gap-10 px-6 py-4 text-white">
               <h1 className="font-bold text-2xl mb-2 text-center">
-                🎉 Get Rewarded
+                Get Rewarded
               </h1>
               <p className="">
                 Earn badges, unlock content, and show off your skills.
@@ -69,7 +69,7 @@ export default function HowUProWorks(): ReactElement {
 
         <div className={`col-span-2 ${cardClass}`}>
           <CardDetails
-            title="👨‍👩‍👧 Train Together"
+            title="Train Together"
             description="Designed for siblings, parents, and teammates to join in. Build healthy habits and memories that last beyond the game."
             imgSrc="train_together.jpg"
             imgClassName="rounded-lg"
