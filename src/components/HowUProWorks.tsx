@@ -17,8 +17,6 @@ export default function HowUProWorks(): ReactElement {
         </p>
       </div>
       <div className="grid grid-cols-6 gap-y-16 gap-x-10 w-4/5 mx-auto">
-        {/* <div className={cardClass}>05</div> */}
-
         <div className={`col-span-3 overflow-visible ${cardClass}`}>
           <CardDetails
             title="Capture Movement"
